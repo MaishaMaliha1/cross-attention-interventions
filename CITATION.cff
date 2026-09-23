@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: Cross-Attention Interventions
+message: "If you use this software, please cite the ACL Findings paper."
+type: software
+authors:
+  - family-names: Maliha
+    given-names: Maisha
+  - family-names: Hougen
+    given-names: Dean F.
+year: 2026
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Mechanistic Interpretability of Text-to-Image Diffusion Models via Cross-Attention Interventions"
+  authors:
+    - family-names: Maliha
+      given-names: Maisha
+    - family-names: Hougen
+      given-names: Dean F.
+  collection-title: "Findings of the Association for Computational Linguistics: ACL 2026"
+  year: 2026
+  start: 25287
+  end: 25299

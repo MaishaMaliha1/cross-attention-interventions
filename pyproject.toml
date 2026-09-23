@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cross-attention-interventions"
+version = "1.0.0"
+description = "Mechanistic interpretability of text-to-image diffusion models through cross-attention interventions"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = { text = "MIT" }
+authors = [
+  { name = "Maisha Maliha" },
+  { name = "Dean F. Hougen" },
+]
+dependencies = [
+  "torch>=2.2",
+  "diffusers>=0.32,<0.38",
+  "transformers>=4.44,<5",
+  "accelerate>=0.34",
+  "safetensors>=0.4",
+  "numpy>=1.26",
+  "Pillow>=10.0",
+  "PyYAML>=6.0",
+  "typer>=0.12",
+  "rich>=13.7",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+eval = [
+  "open-clip-torch>=2.26",
+  "scipy>=1.12",
+]
+pos = [
+  "transformers>=4.44,<5",
+]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=5.0",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+cai = "cross_attention_interventions.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

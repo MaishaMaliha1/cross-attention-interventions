@@ -1,0 +1,13 @@
+model: sd20
+steps: 30
+guidance_scale: 7.5
+width: 512
+height: 512
+scheduler: ddim
+map_size: 64
+smoothing: 1.0e-8
+top_heads: 5
+strengthen_factor: 1.25
+strengthen_steps: 25
+dtype: float16
+device: cuda
