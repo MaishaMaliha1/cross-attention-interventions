@@ -99,10 +99,6 @@ Prompt-adherence manifest:
 
 Paths in a grounding manifest are resolved relative to the manifest file.
 
-## Reproducible paired interventions
-
-Every baseline/intervention group reuses the exact same initial latent tensor and inference configuration. A latent tensor may also be supplied explicitly for repeatable reruns across machines.
-
 ## Tests
 
 The unit tests cover projected-contribution norms, shared-support alignment, smoothed KL sensitivity, map aggregation, targeted head selection, and evaluation metrics without downloading diffusion checkpoints.
